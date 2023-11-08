@@ -7,11 +7,11 @@ function obterMensagens() {
         method: 'GET',
         dataType: 'json',
         async: false
-    }).fail(function(){
+    }).fail(function () {
         return retorno;
     });
 
-    consulta.done(function(data) {
+    consulta.done(function (data) {
         retorno = data;
     });
 
@@ -47,14 +47,14 @@ function validarUsuario(objLoginSenha) {
         async: false,
         headers: {
             'Access-Control-Allow-Origin': '*'
-                },
+        },
         contentType: 'application/json',
         data: JSON.stringify(objLoginSenha)
-    }).fail(function(){
+    }).fail(function () {
         return retorno;
     });
 
-    validacao.done(function(data) {
+    validacao.done(function (data) {
         retorno = data;
     });
 
